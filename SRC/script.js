@@ -1,7 +1,37 @@
 const generatorBtn = document.getElementById("generator-btn");
 const paletteContainer = document.querySelector(".palette-container");
 
+
 generatorBtn.addEventListener("click", generatorPalette);
+
+paletteContainer.addEventListener("click", function(e) {
+    if(e.target.classList.contains("copy-btn")) {
+        const hexValue = e.target.previusElementSibling.textContent;
+
+        navigator.clipboard.writeText(hexValue)
+        .then(()=> showCopySucess(e.target))
+        .catch((err) => console.log(err))
+    } else if(e.target.classList.contains("color")) {
+        const hexValue = e.target.next.ElementSibling.querySelector(".hex=value").textContent;
+        navigator.clipboard
+          .writeText(hexValue)
+          .then(() => showCopySucess(e.target.nextElementSibling.querySelector(".copy-btn")))
+          .catch((err) => console.log(err));
+    }
+});
+
+function showCopySucess(element){
+    element.classList.remove("far", "fa-copy");
+    element.classList.add("fas", "fa-check");
+
+    element.style.color = "#48bb78";
+
+    setTimeout(() => {
+        element.classList.remove("fas", "fa-check");
+        element.classList.add("far", "fa-copy");
+        element.style.color = "";
+    },1500);
+}
 
 function generatorPalette() {
     const colors = [];
