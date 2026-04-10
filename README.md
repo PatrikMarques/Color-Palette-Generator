@@ -16,7 +16,8 @@ Um gerador de paletas de cores aleatórias desenvolvido para praticar a manipula
 - **Google Fonts**: Tipografia Roboto.
 
 ## 📸 Demonstração
-![Preview do Projeto](file:///E:/PROGRAMA%C3%87%C3%83O/DIO/MEUS%20PROJETOS/Color%20Palette%20Generator/SRC/index.html)
+![Preview do Projeto] <img width="928" height="479" alt="image" src="https://github.com/user-attachments/assets/ee89d6ca-fe69-4d4e-9345-5724b724cd3b" />
+
 
 ## 📋 Como rodar o projeto
 1. Clone este repositório:
