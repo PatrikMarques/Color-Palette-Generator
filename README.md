@@ -22,4 +22,4 @@ Um gerador de paletas de cores aleatórias desenvolvido para praticar a manipula
 ## 📋 Como rodar o projeto
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/patrikmarques/color-palette-generator.git](https://github.com/seu-usuario/color-palette-generator.git)
+   git clone [https://github.com/patrikmarques/color-palette-generator](https://github.com/PatrikMarques/Color-Palette-Generator).git]
