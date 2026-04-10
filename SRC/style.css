@@ -12,7 +12,7 @@ body {
     background: linear-gradient(135deg, #83aBdf, #c3cfe2);
     min-height: 100vh;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     padding: 20px;
 }

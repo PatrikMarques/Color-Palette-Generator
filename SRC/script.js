@@ -6,13 +6,13 @@ generatorBtn.addEventListener("click", generatorPalette);
 
 paletteContainer.addEventListener("click", function(e) {
     if(e.target.classList.contains("copy-btn")) {
-        const hexValue = e.target.previusElementSibling.textContent;
+        const hexValue = e.target.previousElementSibling.textContent;
 
         navigator.clipboard.writeText(hexValue)
         .then(()=> showCopySucess(e.target))
         .catch((err) => console.log(err))
     } else if(e.target.classList.contains("color")) {
-        const hexValue = e.target.next.ElementSibling.querySelector(".hex=value").textContent;
+        const hexValue = e.target.nextElementSibling.querySelector(".hex-value").textContent;
         navigator.clipboard
           .writeText(hexValue)
           .then(() => showCopySucess(e.target.nextElementSibling.querySelector(".copy-btn")))
@@ -36,7 +36,7 @@ function showCopySucess(element){
 function generatorPalette() {
     const colors = [];
 
-    for(let i = 0; 1<5;i++){
+    for(let i = 0; i < 5;i++){
         colors.push(generatorRandomColor());
     }
 
@@ -57,7 +57,7 @@ function updatePaletteDisplay(colors) {
     const colorBoxes = document.querySelectorAll(".color-box");
 
     colorBoxes.forEach((box, index) => {
-        const color = colors(index);
+        const color = colors[index];
         const colorDiv = box.querySelector(".color");
         const hexValue = box.querySelector(".hex-value");
 
